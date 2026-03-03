@@ -15,11 +15,11 @@ export default function AboutSection({ about }: Props) {
           About The Artists
         </h2>
 
-      <div className="max-w-[1400px] mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-[1400px] mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
         {about?.map((artist: any)=> (
             <div
               key={artist._id}
-              className="grid md:grid-cols-2 gap-4 items-center mb-32"
+              className="grid md:grid-cols-2 gap-8 items-center mb-32"
             >
               {/* Image */ }
               <div className="relative">
@@ -33,10 +33,6 @@ export default function AboutSection({ about }: Props) {
 
               {/* Content */}
               <div className="max-w-xl">
-
-                {/* <p className="font-serif tracking-[0.35em] uppercase text-l text-gray-500 mb-6">
-                  About the Artist
-                </p> */}
 
                 <h2 className="font-serif text-4xl mt-8">
                   - {artist.name}

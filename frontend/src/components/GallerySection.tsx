@@ -8,7 +8,7 @@ interface Props {
 
 export default function GallerySection({ galleries }: Props) {
   return (
-    <section className="max-w-6xl mx-auto py-5 px-6 md:px-16 bg-white">
+    <section className="max-w-6xl mx-auto pt-20 py-5 px-6 md:px-16 bg-white">
 
       <div className="max-w-[1400px] mx-auto px-6 mb-20 text-center">
 

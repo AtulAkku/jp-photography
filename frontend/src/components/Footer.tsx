@@ -1,10 +1,11 @@
-"use client"
-
 import Link from "next/link"
 import Logo from "./Logo"
-import { Instagram, Facebook } from "lucide-react"
+import { Instagram, Facebook, Youtube } from "lucide-react"
+import { getContactPageData } from "@/lib/queries"
 
-export default function Footer() {
+export default async function Footer() {
+  const data = await getContactPageData()
+
   return (
     <footer className="bg-black text-white pt-24 pb-10">
 
@@ -49,21 +50,21 @@ export default function Footer() {
             <div className="space-y-4 font-poppins text-sm text-white/70">
 
               <p>
-                <a href="mailto:atulakku99@gmail.com" className="hover:text-white transition">
-                  atulakku99@gmail.com
+                <a href={`mailto:${data.email}`} className="hover:text-white transition">
+                  {data.email}
                 </a>
               </p>
 
               <p>
-                <a href="tel:08080470280" className="hover:text-white transition">
-                  080804 70280
+                <a href={`tel:${data.phone}`} className="hover:text-white transition">
+                  {data.phone}
                 </a>
               </p>
 
               <div className="flex gap-5 mt-4">
 
                 <a
-                  href="#"
+                  href="https://www.instagram.com/jp___photography_/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
@@ -72,12 +73,21 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://www.facebook.com/jyotipokhariya.jasmine"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
                 >
                   <Facebook size={18} />
+                </a>
+
+                <a
+                  href="https://www.youtube.com/@jpphotography"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition"
+                >
+                  <Youtube size={18} />
                 </a>
 
               </div>
