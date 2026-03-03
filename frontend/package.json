@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@sanity/image-url": "^2.0.3",
+    "lucide-react": "^0.576.0",
     "next": "16.1.6",
     "next-sanity": "^12.1.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-masonry-css": "^1.0.16"
+    "react-masonry-css": "^1.0.16",
+    "swiper": "^12.1.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
